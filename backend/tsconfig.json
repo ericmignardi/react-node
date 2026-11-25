@@ -1,0 +1,32 @@
+{
+  // Docs: https://aka.ms/tsconfig
+  "compilerOptions": {
+    // Where source lives and where compiled JS goes
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Modern Node.js (ESM). Relative imports need a ".js" extension,
+    // e.g. import { app } from "./app.js";
+    "module": "nodenext",
+    "target": "es2024",
+    "lib": ["es2024"],
+    "types": ["node"],
+
+    // Source maps make stack traces point to your .ts files
+    "sourceMap": true,
+
+    // Type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Interop / tooling
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
